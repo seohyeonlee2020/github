@@ -17,7 +17,7 @@ body{
 	margin: 30px;
   }
 
-  #new-quote{
+ button{
 	background-color: black;
 	border: 1px solid;
 	color: white;
@@ -25,3 +25,5 @@ body{
 	padding: 10px;
 	font-family: monospace;
   }
+
+

@@ -11,9 +11,16 @@ class Quotebox extends React.Component {
 	}
 
 	randomQuote = () => {
-		let quoteList = audre_lorde_quotes.quotes;
-		let randomIndex = Math.floor(Math.random() * quoteList.length);
-		let randomQuote = quoteList[randomIndex];
+		console.log("randomQuote called")
+		console.log(localStorage)
+		//let quoteList = audre_lorde_quotes.quotes;
+		/*quoteList.map((quote, idx) => {
+			localStorage.setItem(idx, JSON.stringify(quote));
+		}) */
+		let randomIdx = Math.floor(Math.random() * 10);
+		let randomQuote = JSON.parse(localStorage.getItem(randomIdx));
+		console.log("randomQuote: ", randomQuote)
+		//let randomQuote = quoteList[randomIdx]
 		this.setState({quote: randomQuote.quote, source: randomQuote.source});
 	}
 
